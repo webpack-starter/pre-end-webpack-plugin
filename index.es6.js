@@ -1,7 +1,9 @@
 /**
  * 在 Webpack 即将退出时，根据成功、失败情况分别执行不同的回调操作
- * --------------------
- * how to use ?
+ *
+ * @author ronffy
+ *
+ * @example
  * 在webpack配置文件中
  * import PreEndWebpackPlugin from 'pre-end-webpack-plugin';
  * plugins: [
@@ -12,6 +14,7 @@
  * 	})
  * ]
  */
+
 class PreEndWebpackPlugin {
 	constructor(doneCallback, failCallback){
 		// 实例化时传入两个回调函数
@@ -31,3 +34,4 @@ class PreEndWebpackPlugin {
 }
 
 module.exports = PreEndWebpackPlugin;
+module.exports.default = PreEndWebpackPlugin;
